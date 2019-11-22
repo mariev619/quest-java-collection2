@@ -1,14 +1,20 @@
-public class Hero {
+public class Hero implements Comparable<Hero> {
 
     // attributs
     private String name;
     private int age;
+
+
+        public int compareTo(Hero heroes) {
+            return this.getName().compareTo(heroes.getName());
+        }
 
     // constructeurs
     public Hero(String name, int age) {
         this.name = name;
         this.age = age;
     }
+
 
     // accesseurs (getters)
     public String getName() {
